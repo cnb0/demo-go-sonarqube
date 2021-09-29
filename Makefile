@@ -5,13 +5,13 @@ all: clean build test
 version := "0.1.0"
 
 build:
-	go mod tidy
+	/usr/local/go/bin/go mod tidy
 	mkdir -p bin
-	go build -o bin/demo cmd/main.go
+	/usr/local/go/bin/go build -o bin/demo cmd/main.go
 
 test:
-	go test -short -coverprofile=bin/cov.out ./...
-	go tool cover -func=bin/cov.out
+	/usr/local/go/bin/go test -short -coverprofile=bin/cov.out ./...
+	/usr/local/go/bin/go tool cover -func=bin/cov.out
 
 clean:
 	rm -rf ./bin
