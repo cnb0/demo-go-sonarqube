@@ -9,7 +9,7 @@ pipeline {
 		stage('Pull code') {
             steps {
 				git branch: "main",
-				url: 'https://github.com/up1/demo-go-sonarqube.git'
+				url: 'https://github.com/cnb0/demo-go-sonarqube.git'
             }
         }
         stage('Build') {
